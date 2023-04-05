@@ -87,7 +87,7 @@ body {
 }
 .header-list {
   display: flex;
-  column-gap: 40px;
+  gap: 40px;
 }
 
 .header-link {
@@ -113,6 +113,7 @@ body {
 }
 .header-list-contacts {
   display: flex;
+  gap: 40px;
 }
 .header-mail-tel {
   color: var(--main-color-text);
@@ -121,9 +122,7 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
-.header-list-item:first-child {
-  margin-right: 40px;
-}
+
 
 /*========================= Footer ============================*/
 .footer {
