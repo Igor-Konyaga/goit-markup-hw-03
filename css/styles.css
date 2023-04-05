@@ -19,6 +19,7 @@ button {
 }
 img {
   display: block;
+  max-width: 100%;
 }
 
 .link {
@@ -62,7 +63,7 @@ body {
 }
 .header {
   padding: 24px 0px;
-  border-bottom: 1px solid #E7E9FC;
+  border-bottom: 1px solid #e7e9fc;
 }
 .header-nav {
   display: flex;
@@ -280,8 +281,8 @@ body {
 
 /* Portfolio Page */
 /* =============== Section Portfolio =================== */
-.potrfolio{
-	margin-bottom: 120px;
+.potrfolio {
+  margin-bottom: 120px;
 }
 .portfolio-container {
   display: flex;
@@ -318,24 +319,22 @@ body {
 .list-cards {
   display: flex;
   flex-wrap: wrap;
-  row-gap: 48px;
-  column-gap: 24px;
+  margin-left: -24px;
+  margin-top: -48px;
 }
 .list-card {
-  width: calc(100% / 3 - 24px);
+  flex-basis: calc(100% / 3 - 24px);
+  margin-left: 24px;
+  margin-top: 48px;
+
+  border: 1px solid #e7e9fc;
+}
+.list-card-content {
+padding-top: 32px;
 padding-bottom: 32px;
-
-  border: 1px solid #E7E9FC;
-}
-.list-card-content{
-	padding-left: 16px;
+padding-left: 16px;
 }
 
-
-.list-card-img {
-	width: 100%;
-  margin-bottom: 32px;
-}
 .list-card-title {
   margin-bottom: 8px;
 
