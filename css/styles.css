@@ -53,6 +53,7 @@ body {
   width: 1158px;
   margin: 0 auto;
   padding: 0 15px;
+  align-items: center;
 }
 /* ================== Header ========================= */
 .header-portfolio {
@@ -67,6 +68,7 @@ body {
 }
 .header-nav {
   display: flex;
+  align-items: center;
 }
 .logo {
   color: var(--accent-color);
@@ -78,17 +80,20 @@ body {
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+.header-logo {
+  margin-right: 76px;
+}
 .header-span {
   color: var(--secondary-color-text);
 }
 .header-list {
   display: flex;
-  margin-left: 76px;
 }
-.header-item:not(:first-child) {
-  margin-left: 40px;
+.header-item:not(:last-child) {
+  margin-right: 40px;
 }
 .header-link {
+  padding: 24px 0;
   color: var(--secondary-color-text);
 
   font-weight: 500;
@@ -118,8 +123,8 @@ body {
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
-.header-mail-tel:last-child {
-  margin-left: 40px;
+.header-mail-tel:first-child {
+  margin-right: 40px;
 }
 
 /*========================= Footer ============================*/
@@ -129,8 +134,8 @@ body {
   background-color: #2e2f42;
 }
 .footer-logo {
-  display: block;
-  margin-bottom: 8px;
+  display: inline-block;
+  margin-bottom: 16px;
   color: var(--accent-color);
 }
 .footer-text {
@@ -149,16 +154,13 @@ body {
 /* Main Page*/
 /* =============== Section Hero ================= */
 .hero {
-  padding-top: 188px;
-  padding-bottom: 292px;
-  margin-bottom: 120px;
-  text-align: center;
+  padding: 188px 0;
 
   background-color: #2e2f42;
 }
 
 .hero-main-title {
-  width: 496px;
+  max-width: 496px;
   margin: 0 auto 48px;
   color: #ffffff;
 
@@ -167,12 +169,18 @@ body {
   letter-spacing: 0.02em;
 }
 .hero-button {
+  display: block;
+  min-width: 169px;
+  height: 56px;
+  margin: 0 auto;
   padding: 16px 32px;
 
   color: #ffffff;
   background-color: var(--accent-color);
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  cursor: pointer;
 
   font-weight: 500;
   font-size: 16px;
@@ -186,7 +194,7 @@ body {
 }
 /* ============== Section Advantages =================== */
 .advantages {
-  margin-bottom: 120px;
+  padding: 120px 0px;
 }
 .visually-hidden {
   position: absolute;
@@ -203,8 +211,11 @@ body {
 .advantages-list {
   display: flex;
 }
-.advantages-item:not(:first-child) {
-  margin-left: 24px;
+.advantages-item {
+  flex-basis: calc((100% - 72px) / 4);
+}
+.advantages-item:not(:last-child) {
+  margin-right: 24px;
 }
 .advantages-title {
   margin-bottom: 8px;
@@ -222,7 +233,7 @@ body {
 }
 /* ================== Section What ======================== */
 .what {
-  margin-bottom: 120px;
+  padding-bottom: 120px;
 }
 .what-title,
 .team-main-title {
@@ -239,8 +250,8 @@ body {
 .what-list {
   display: flex;
 }
-.what-card:not(:first-child) {
-  margin-left: 24px;
+.what-card:not(:last-child) {
+  margin-right: 24px;
 }
 
 /* =================== Section Our Team ======================= */
@@ -254,12 +265,15 @@ body {
 }
 .team-list-item {
   background-color: #ffffff;
+  box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
+    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+  border-radius: 0px 0px 4px 4px;
 }
 .team-list-item:not(:first-child) {
   margin-left: 24px;
 }
-.team-img {
-  margin-bottom: 32px;
+.team-content {
+  padding: 16px 32px;
 }
 .team-title {
   margin-bottom: 8px;
@@ -282,12 +296,12 @@ body {
 /* Portfolio Page */
 /* =============== Section Portfolio =================== */
 .potrfolio {
-  margin-bottom: 120px;
+  padding: 96px 120px;
 }
 .portfolio-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: center;
 }
 .filters-list {
   display: flex;
@@ -308,31 +322,31 @@ body {
   letter-spacing: 0.04em;
   cursor: pointer;
 }
-.filters-item:not(:first-child) {
-  margin-left: 24px;
+.filters-item:not(:last-child) {
+  margin-right: 24px;
 }
 .filters-button:hover,
 .filters-button:focus {
   color: #ffffff;
   background-color: var(--hover-color);
+  border: 1px solid transparent;
 }
 .list-cards {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -24px;
-  margin-top: -48px;
+ column-gap: 24px;
+ row-gap: 48px;
+
 }
 .list-card {
-  flex-basis: calc(100% / 3 - 24px);
-  margin-left: 24px;
-  margin-top: 48px;
+  flex-basis: calc((100% - 48px) / 3);
 
   border: 1px solid #e7e9fc;
 }
 .list-card-content {
-padding-top: 32px;
-padding-bottom: 32px;
-padding-left: 16px;
+padding: 32px 16px;
+
+border: 1px solid #e7e9fc;
 }
 
 .list-card-title {
