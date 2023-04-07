@@ -37,6 +37,9 @@ img {
   --secondary-color-text: #2e2f42;
   --accent-color: #4d5ae5;
   --hover-color: #404bbf;
+
+  --items: 3;
+  --retreat: 24px;
 }
 /* ==================================================================================================================================== */
 
@@ -207,7 +210,8 @@ body {
   gap: 24px;
 }
 .advantages-item {
-  flex-basis: calc((100% - 72px) / 4);
+  --items: 4;
+  flex-basis: calc((100% - var(--retreat) * var(--items) - 1) / var(--items));
 }
 
 .advantages-title {
@@ -256,7 +260,8 @@ body {
   gap: 24px;
 }
 .team-list-item {
-  flex-basis: calc((100% - 72px) / 4);
+   --items: 4;
+  flex-basis: calc((100% - var(--retreat) * var(--items) - 1) / var(--items));
   background-color: #ffffff;
 }
 
@@ -326,7 +331,7 @@ body {
   row-gap: 48px;
 }
 .list-card {
-  flex-basis: calc((100% - 48px) / 3);
+   flex-basis: calc((100% - var(--retreat) * var(--items) - 1) / var(--items));
 }
 .list-card-content {
   padding: 32px 16px;
