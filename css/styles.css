@@ -20,6 +20,7 @@ button {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 .link {
@@ -211,7 +212,7 @@ body {
 }
 .advantages-item {
   --items: 4;
-  flex-basis: calc((100% - var(--retreat) * var(--items) - 1) / var(--items));
+  flex-basis: calc((100% - var(--retreat) * (var(--items) - 1)) / var(--items));
 }
 
 .advantages-title {
@@ -261,7 +262,7 @@ body {
 }
 .team-list-item {
    --items: 4;
-  flex-basis: calc((100% - var(--retreat) * var(--items) - 1) / var(--items));
+  flex-basis: calc((100% - var(--retreat) * (var(--items) - 1)) / var(--items));
   background-color: #ffffff;
 }
 
@@ -327,11 +328,11 @@ body {
 .list-cards {
   display: flex;
   flex-wrap: wrap;
-  column-gap: 24px;
+column-gap: 24px;
   row-gap: 48px;
 }
 .list-card {
-   flex-basis: calc((100% - var(--retreat) * var(--items) - 1) / var(--items));
+   flex-basis: calc((100% - var(--retreat) * (var(--items) - 1)) / var(--items));
 }
 .list-card-content {
   padding: 32px 16px;
